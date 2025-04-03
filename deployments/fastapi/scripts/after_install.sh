@@ -1,5 +1,6 @@
 #!bin/bash
 
+ENV_FILE_LOCATION= "$(pwd)/.env"
 # This script is executed after the installation of the application
 
 # Change the file permissions
@@ -18,6 +19,11 @@ fi
 
 # Generate .env file using the python script
 
+# 1- Retrieve environment variables from AWS Parameter Store or Secrets Manager using
+# utils function in helpers/functions.sh / helpers/utils.sh
 
 
-# Create the systemd service file
+# 2- Create a .env file with the retrieved environment variables
+
+
+# 3- Create the systemd service file using helpers/functions.sh
